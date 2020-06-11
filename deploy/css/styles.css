@@ -9,7 +9,7 @@ html {
 /* =============
     Variables
 ============= */
-/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
 /**
@@ -29,6 +29,12 @@ html {
  */
 body {
   margin: 0; }
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block; }
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
@@ -316,10 +322,8 @@ figure {
   margin: 0; }
 
 ul {
-  padding: 0;
+  padding-left: 25px;
   margin: 0; }
-  ul li {
-    list-style: none; }
 
 .container-grid {
   display: grid;
@@ -337,7 +341,56 @@ ul {
     Typography
 ============= */
 body {
-  font-family: 'Montserrat', sans-serif; }
+  font-family: futura-pt, sans-serif;
+  font-weight: 400;
+  font-style: normal; }
+
+h1 {
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2.625rem; }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3.4375rem; } }
+h2 {
+  font-family: futura-pt-condensed, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.875rem; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 2.1875rem; } }
+h3 {
+  font-family: futura-pt, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.125rem; }
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 1.375rem; } }
+.subhead {
+  padding-top: 8px;
+  padding-bottom: 3px; }
+
+.subhead-child {
+  padding-top: 25px; }
+
+h4 {
+  font-family: futura-pt, sans-serif;
+  font-weight: 300;
+  font-style: italic; }
+
+.location {
+  padding-top: 5px;
+  font-size: 1.125rem; }
+  @media (min-width: 768px) {
+    .location {
+      font-size: 1.375rem; } }
+#gd {
+  font-family: futura-pt-condensed, sans-serif;
+  font-weight: 500;
+  font-style: normal; }
 
 h1, h2, h3, h4 {
   margin: 0;
@@ -350,6 +403,27 @@ p {
 .section-title {
   font-weight: 300; }
 
+p {
+  line-height: 1.25rem;
+  padding-top: 3px; }
+  @media (min-width: 768px) {
+    p {
+      font-size: 1.375rem;
+      line-height: 1.6875rem; } }
+.italic {
+  font-family: futura-pt, sans-serif;
+  font-weight: 300;
+  font-style: italic; }
+
+ul {
+  padding-top: 8px; }
+
+li {
+  line-height: 1.3125rem; }
+  @media (min-width: 768px) {
+    li {
+      font-size: 1.375rem;
+      line-height: 1.6875rem; } }
 /* =============
     Buttons
 ============= */
@@ -380,12 +454,137 @@ textarea {
 /* =============
     Section 1
 ============= */
-/* =============
-    Section 2
-============= */
-/* =============
-    Section 3
-============= */
-/* =============
-    Section 4
-============= */
+@media (min-width: 1200px) {
+  #section-1 {
+    display: grid;
+    grid-template-columns: auto 1800px auto;
+    grid-template-areas: ". resume .";
+    grid-gap: 40px; } }
+
+#section-1 #resume-content {
+  padding: 25px 15px; }
+  @media (min-width: 768px) {
+    #section-1 #resume-content {
+      padding: 40px 30px; } }
+  @media (min-width: 1200px) {
+    #section-1 #resume-content {
+      grid-area: resume; } }
+  @media (min-width: 768px) {
+    #section-1 #resume-content #intro {
+      display: grid;
+      grid-template-columns: auto 1fr 1fr auto;
+      grid-template-areas: ". name contact .";
+      grid-gap: 40px;
+      padding-bottom: 30px; } }
+  @media (min-width: 992px) {
+    #section-1 #resume-content #intro {
+      grid-template-columns: auto auto 50%;
+      grid-template-areas: "name contact ."; } }
+  @media (min-width: 768px) {
+    #section-1 #resume-content #intro #name-gd {
+      grid-area: name; } }
+  #section-1 #resume-content #intro #name-gd h1 {
+    text-align: left; }
+    @media (min-width: 768px) {
+      #section-1 #resume-content #intro #name-gd h1 {
+        text-align: right; } }
+  #section-1 #resume-content #intro #name-gd #gd {
+    font-size: 1.375rem;
+    text-align: left;
+    padding-top: 5px; }
+    @media (min-width: 768px) {
+      #section-1 #resume-content #intro #name-gd #gd {
+        font-size: 1.6875rem;
+        padding-top: 0px;
+        text-align: right; } }
+  #section-1 #resume-content #intro #contact-info {
+    font-size: 1rem;
+    line-height: 1.3125rem;
+    text-align: right;
+    padding-top: 5px;
+    padding-bottom: 50px; }
+    @media (min-width: 768px) {
+      #section-1 #resume-content #intro #contact-info {
+        grid-area: contact;
+        text-align: left; } }
+  @media (min-width: 992px) {
+    #section-1 #resume-content #desktop-grid-container {
+      display: grid;
+      grid-template-columns: 300px auto auto;
+      grid-template-areas: "edu work act";
+      grid-gap: 40px; } }
+  @media (min-width: 768px) {
+    #section-1 #resume-content #desktop-grid-container #ed-prof-lang {
+      display: grid;
+      grid-template-columns: auto 1fr 1fr auto;
+      grid-template-rows: auto auto;
+      grid-template-areas: ". edu-left prof-right ." ". edu-left lang-right .";
+      grid-gap: 40px;
+      padding-bottom: 40px; } }
+  @media (min-width: 992px) {
+    #section-1 #resume-content #desktop-grid-container #ed-prof-lang {
+      grid-template-columns: auto;
+      grid-template-rows: auto auto auto;
+      grid-template-areas: "edu-left" "prof-right" "lang-right"; } }
+  @media (min-width: 768px) {
+    #section-1 #resume-content #desktop-grid-container #ed-prof-lang #education {
+      grid-area: edu-left;
+      text-align: right; } }
+  #section-1 #resume-content #desktop-grid-container #ed-prof-lang #education h2 {
+    text-align: left; }
+    @media (min-width: 768px) {
+      #section-1 #resume-content #desktop-grid-container #ed-prof-lang #education h2 {
+        text-align: right; } }
+  #section-1 #resume-content #desktop-grid-container #ed-prof-lang #education h3 {
+    text-align: left; }
+    @media (min-width: 768px) {
+      #section-1 #resume-content #desktop-grid-container #ed-prof-lang #education h3 {
+        text-align: right; } }
+  #section-1 #resume-content #desktop-grid-container #ed-prof-lang #education p #gd-span {
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal; }
+  #section-1 #resume-content #desktop-grid-container #ed-prof-lang #education p #japan-span {
+    font-family: futura-pt, sans-serif;
+    font-weight: 300;
+    font-style: italic; }
+  @media (min-width: 768px) {
+    #section-1 #resume-content #desktop-grid-container #ed-prof-lang #proficiencies {
+      grid-area: prof-right; } }
+  @media (min-width: 992px) {
+    #section-1 #resume-content #desktop-grid-container #ed-prof-lang #proficiencies {
+      text-align: right; } }
+  #section-1 #resume-content #desktop-grid-container #ed-prof-lang #proficiencies h2 {
+    padding-top: 30px; }
+    @media (min-width: 768px) {
+      #section-1 #resume-content #desktop-grid-container #ed-prof-lang #proficiencies h2 {
+        padding-top: 0px; } }
+  @media (min-width: 768px) {
+    #section-1 #resume-content #desktop-grid-container #ed-prof-lang #languages {
+      grid-area: lang-right; } }
+  @media (min-width: 992px) {
+    #section-1 #resume-content #desktop-grid-container #ed-prof-lang #languages {
+      text-align: right; } }
+  #section-1 #resume-content #desktop-grid-container #ed-prof-lang #languages h2 {
+    padding-top: 30px; }
+    @media (min-width: 768px) {
+      #section-1 #resume-content #desktop-grid-container #ed-prof-lang #languages h2 {
+        padding-top: 0px; } }
+  #section-1 #resume-content #desktop-grid-container #work-experience h2 {
+    padding-top: 30px; }
+    @media (min-width: 992px) {
+      #section-1 #resume-content #desktop-grid-container #work-experience h2 {
+        padding-top: 0px; } }
+  #section-1 #resume-content #desktop-grid-container #work-experience .position {
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    font-style: normal; }
+  #section-1 #resume-content #desktop-grid-container #act-vol-aw #activities h2 {
+    padding-top: 30px; }
+    @media (min-width: 992px) {
+      #section-1 #resume-content #desktop-grid-container #act-vol-aw #activities h2 {
+        padding-top: 0px; } }
+  #section-1 #resume-content #desktop-grid-container #act-vol-aw #volunteering h2 {
+    padding-top: 30px; }
+  #section-1 #resume-content #desktop-grid-container #act-vol-aw #awards h2 {
+    padding-top: 30px; }

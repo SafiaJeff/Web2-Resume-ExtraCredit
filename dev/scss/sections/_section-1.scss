@@ -2,8 +2,246 @@
     Section 1
 ============= */
 #section-1{
-    .grid-content{
-        
+
+    @include xl{
+        display: grid;
+        grid-template-columns: auto 1800px auto;
+        grid-template-areas: ". resume .";
+        grid-gap: 40px;
     }
+
+    #resume-content{
+        padding: 25px 15px;
+
+        @include md{
+            padding: 40px 30px;
+        }
+
+        @include xl{
+            grid-area: resume;
+        }
+        
+
+        #intro{
+
+            @include md{
+                display: grid;
+                grid-template-columns: auto 1fr 1fr auto;
+                grid-template-areas: ". name contact .";
+                grid-gap: 40px;
+
+                padding-bottom: 30px;
+            }
+
+            @include lg{
+                grid-template-columns: auto auto 50%;
+                grid-template-areas: "name contact .";
+
+            }
+
+            #name-gd{
+                @include md{
+                    grid-area: name;
+                }
+
+                h1{
+                    text-align: left;
+
+                    @include md{
+                        text-align: right;
+                    }
+                }
+        
+                #gd{
+                    font-size: rem-calc(22);
+                    text-align: left;
+                    padding-top: 5px;
+
+                    @include md{
+                        font-size: rem-calc(27);
+                        padding-top: 0px;
+                        text-align: right;
+                    }
+                }
+
+            }
+    
+            #contact-info{
+                @include md{
+                    grid-area: contact;
+                    text-align: left;
+                }
+
+                font-size: rem-calc(16);
+                line-height: rem-calc(21);
+                text-align: right;
+
+                padding-top: 5px;
+                padding-bottom: 50px;
+            }
+
+            
+        }
+
+        #desktop-grid-container{
+
+            @include lg{
+                display: grid;
+                grid-template-columns: 300px auto auto;
+                grid-template-areas: "edu work act";
+                grid-gap: 40px;
+            }
+
+            #ed-prof-lang{
+                @include md{
+                    display: grid;
+                    grid-template-columns: auto 1fr 1fr auto;
+                    grid-template-rows: auto auto;
+                    grid-template-areas: ". edu-left prof-right ."
+                                        ". edu-left lang-right .";
+                    grid-gap: 40px;
+                    padding-bottom: 40px;
+                }
+
+                @include lg{
+                    grid-template-columns: auto;
+                    grid-template-rows: auto auto auto;
+                    grid-template-areas: "edu-left"
+                                        "prof-right"
+                                        "lang-right";
+                }
+
+
+                #education{
+
+                    @include md{
+                        grid-area: edu-left;
+                        text-align: right;
+                    }
+
+                    h2{
+                        text-align: left;
+
+                        @include md{
+                            text-align: right;
+                        }
+                    }
+        
+                    h3{
+                        text-align: left;
+
+                        @include md{
+                            text-align: right;
+                        }
+                    }
+        
+                    p{
+                        #gd-span{
+                            font-family: futura-pt, sans-serif;
+                            font-weight: 500;
+                            font-style: normal;
+                        }
+        
+                        #japan-span{
+                            font-family: futura-pt, sans-serif;
+                            font-weight: 300;
+                            font-style: italic;
+                        }
+        
+                        
+                    }
+                    
+                }
+        
+                #proficiencies{
+                    @include md{
+                        grid-area: prof-right;
+                    }
+
+                    @include lg{
+                        text-align: right;
+                    }
+
+                    h2{
+                        padding-top: 30px;
+                        
+                        @include md{
+                            padding-top: 0px;
+                        }
+                    }
+                }
+        
+                #languages{
+                    @include md{
+                        grid-area: lang-right; 
+                    }
+
+                    @include lg{
+                        text-align: right;
+                    }
+
+                    h2{
+                        padding-top: 30px;
+
+                        @include md{
+                            padding-top: 0px;
+                        }
+                    }
+                }
+
+            }
+
+            #work-experience{
+                h2{
+                    padding-top: 30px;
+
+                    @include lg{
+                        padding-top: 0px;
+                    }
+                }
+
+                .position{
+                    font-family: futura-pt, sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                }
+
+            }
+
+            #act-vol-aw{
+                #activities{
+                    h2{
+                        padding-top: 30px;
+                        @include lg{
+                            padding-top: 0px;
+                        }
+                    }
+        
+                }
+        
+                #volunteering{
+                    h2{
+                        padding-top: 30px;
+                    }
+        
+                }
+
+                #awards{
+                    h2{
+                        padding-top: 30px;
+                    }
+                }
+
+            }
+        }
+        
+
+        
+
+
+
+
+    }
+
 
 }

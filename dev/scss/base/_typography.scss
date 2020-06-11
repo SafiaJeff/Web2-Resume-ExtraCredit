@@ -2,7 +2,79 @@
     Typography
 ============= */
 body{
-    font-family: 'Montserrat', sans-serif;
+    font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+h1{
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+    font-size: rem-calc(42);
+
+    @include md{
+        font-size: rem-calc(55);
+    }
+}
+
+h2{
+    font-family: futura-pt-condensed, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+    font-size: rem-calc(30);
+
+    @include md{
+        font-size: rem-calc(35);
+    }
+}
+
+h3{
+    font-family: futura-pt, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+
+    font-size: rem-calc(18);
+
+    @include md{
+        font-size: rem-calc(22);
+    }
+}
+
+.subhead{
+    padding-top: 8px;
+    padding-bottom: 3px;
+}
+
+.subhead-child{
+    padding-top: 25px;
+}
+
+h4{
+    font-family: futura-pt, sans-serif;
+    font-weight: 300;
+    font-style: italic;
+
+    
+}
+
+.location{
+    padding-top: 5px;
+    font-size: rem-calc(18);
+
+    @include md{
+        font-size: rem-calc(22);
+    }
+}
+
+#gd{
+    font-family: futura-pt-condensed, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
 }
 
 h1,h2,h3,h4{
@@ -17,4 +89,33 @@ p{
 
 .section-title{
     font-weight: 300;
+}
+
+p{
+    line-height: rem-calc(20);
+    padding-top: 3px;
+
+    @include md{
+        font-size: rem-calc(22);
+        line-height: rem-calc(27);
+    }
+}
+
+.italic{
+    font-family: futura-pt, sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+ul{
+    padding-top: 8px;
+}
+
+li{
+    line-height: rem-calc(21);
+
+    @include md{
+        font-size: rem-calc(22);
+        line-height: rem-calc(27);
+    }
 }
